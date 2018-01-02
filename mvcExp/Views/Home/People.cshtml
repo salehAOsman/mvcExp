@@ -1,0 +1,21 @@
+﻿@model mvcExp.Models.Person
+
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+<table class="table-bordered table-striped alert-success"  >
+    <tr><!--header to table-->
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    @foreach (var item in mvcExp.Models.Person.People)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+        </tr>
+
+    }
+</table>
